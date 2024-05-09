@@ -1,0 +1,70 @@
+<!doctype html> <!-- Declaración del tipo de documento -->
+<html lang="en"> <!-- Inicio del documento HTML con idioma inglés -->
+    <head> <!-- Sección de encabezado -->
+        <title>Title</title> <!-- Título de la página -->
+        <!-- Required meta tags -->
+        <meta charset="utf-8"> <!-- Codificación de caracteres -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Etiquetas meta requeridas para la correcta visualización en dispositivos móviles -->
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="librerias/bootstrap.min.css"> <!-- Enlace al archivo CSS de Bootstrap -->
+    </head>
+    <body style="background-image: url(IMAGENES/FB_IMG_1713835345798.jpg); font-family:sans-serif;font-size: 16px; background-size: cover; background-attachment: fixed;background-position: center center;"> <!-- Estilos para el cuerpo de la página -->
+        <div class="container"> <!-- Contenedor principal -->
+            <div class="row"> <!-- Fila dentro del contenedor -->
+                <div class="col-sm-4"></div> <!-- Columna vacía (ocupando 4 de 12 columnas) -->
+                <div class="col-sm-4" Style="height:450px;background-color: rgba(255, 255, 255, 0.5); /* Define el color de fondo con transparencia */ border: 5px solid #c09e9e; /* Define el borde del cuadro de texto */ padding: 10px; /* Define el espaciado dentro del cuadro de texto */ width: 26px; /* Define el ancho del cuadro de texto */ color: #333; /* Define el color del texto dentro del cuadro de texto */ margin-top: 100px;"> <!-- Columna de contenido (ocupando 4 de 12 columnas) -->
+                    <br> <!-- Salto de línea -->
+                    <br> <!-- Salto de línea -->
+                    <h1 style="color: rgb(23, 20, 20); text-align: center;">OHM</h1> <!-- Encabezado -->
+                    <label for="voltaje">Ingresa el valor de corriente:</label> <!-- Etiqueta para el campo de entrada de corriente -->
+                    <input type="number" class="form-control" name="numero1" id="numero1" placeholder="solo valores numericos" required> <!-- Campo de entrada para corriente -->
+                    <br> <!-- Salto de línea -->
+                    <label for="voltaje2">Ingresa el valor de resistencia:</label> <!-- Etiqueta para el campo de entrada de resistencia -->
+                    <input type="number" class="form-control" name="numero2" id="numero2" placeholder="solo valores numericos" required/> <!-- Campo de entrada para resistencia -->
+                    <br> <!-- Salto de línea -->
+                    <label for="voltaje2">EL RESULTADO ES ohm:</label> <!-- Etiqueta para mostrar el resultado -->
+                    <br> <!-- Salto de línea -->
+                    <label for="" id="resultado" class="form-control"></label> <!-- Etiqueta para mostrar el resultado calculado -->
+                    <span class="btn btn-primary" id="btnCalcular" name="btnCalcular">calcula</span> <!-- Botón para realizar el cálculo -->
+                    <a href="index.html">Volver Atrás</a> <!-- Enlace para volver atrás -->
+                    <br> <!-- Salto de línea -->
+                </div> <!-- Fin de la columna de contenido -->
+            </div> <!-- Fin de la fila -->
+        </div> <!-- Fin del contenedor principal -->
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="librerias/popper.min.js"></script> <!-- Script de Popper.js -->
+        <script src="librerias/jquery-3.7.1.min.js"></script> <!-- Script de jQuery -->
+        <script src="librerias/bootstrap.bundle.min.js"></script> <!-- Script de Bootstrap -->
+    </body> <!-- Fin del cuerpo de la página -->
+</html> <!-- Fin del documento HTML -->
+
+<script>
+
+     // Espera a que el documento HTML esté completamente cargado antes de ejecutar el código jQuery
+        $(document).ready(function(){
+        // Agrega un evento de clic al botón con el ID 'btnCalcular'
+        $('#btnCalcular').click(function(){
+            // Obtiene el valor del campo de entrada con el ID 'numero1'
+            let numero1 = $('#numero1').val();
+            // Obtiene el valor del campo de entrada con el ID 'numero2'
+            let numero2 = $('#numero2').val();
+            
+            // Convierte el valor obtenido de 'numero1' a un número entero
+            let uno = parseInt(numero1);
+            // Convierte el valor obtenido de 'numero2' a un número entero
+            let dos = parseInt(numero2);
+
+            // Realiza la operación de división entre los dos números obtenidos
+            let operacion_newtons = (uno / dos);
+            // Define la variable resultado para almacenar el resultado de la operación
+            let resultado=(operacion_newtos);
+            // Inserta el resultado de la operación en el elemento con el ID 'resultado'
+            $('#resultado').text(operacion_newtos);
+        });
+    });
+</script>
+
+

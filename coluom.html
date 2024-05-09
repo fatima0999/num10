@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <!-- Etiquetas meta requeridas -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Enlace al archivo CSS de Bootstrap -->
+    <link rel="stylesheet" href="librerias/bootstrap.min.css">
+</head>
+<!-- Cuerpo de la página -->
+<body style="background-image: url(IMAGENES/FB_IMG_1713835345798.jpg); font-family: sans-serif; font-size: 16px; background-size: cover; background-attachment: fixed; background-position: center center;">
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Fila -->
+        <div class="row">
+            <!-- Columna vacía para el diseño -->
+            <div class="col-sm-4"></div>
+            <!-- Columna principal -->
+            <div class="col-sm-4" Style="height:450px; background-color: rgba(255, 255, 255, 0.5); border: 5px solid #c09e9e; padding: 10px; width: 26px; color: #333; margin-top: 100px;">
+                <!-- Saltos de línea para espacio -->
+                <br>
+                <br>
+                <!-- Título -->
+                <h1 style="color: rgb(23, 20, 20); text-align: center;">COULOMB</h1>
+                <!-- Etiqueta y campo de entrada para el valor de la corriente -->
+                <label for="voltaje">Ingresa el valor de corriente:</label>
+                <input type="number" class="form-control" name="numero1" id="numero1" placeholder="solo valores numéricos" required>
+                <!-- Etiqueta y campo de entrada para el valor de la resistencia -->
+                <label for="voltaje2">Ingresa el valor de resistencia:</label>
+                <input type="number" class="form-control" name="numero2" id="numero2" placeholder="solo valores numéricos" required>
+                <!-- Etiqueta para mostrar el resultado -->
+                <label for="voltaje2">EL RESULTADO ES coulomb:</label>
+                <!-- Etiqueta para mostrar el resultado calculado -->
+                <br>
+                <label for="" id="resultado" class="form-control"></label>
+                <!-- Botón para calcular -->
+                <span class="btn btn-primary" id="btnCalcular" name="btnCalcular">Calcular</span>
+                <!-- Enlace para volver atrás -->
+                <a href="index.html">Volver Atrás</a>
+                <!-- Saltos de línea para espacio -->
+                <br>
+            </div>
+        </div>
+    </div>
+    <!-- JavaScript opcional -->
+    <!-- jQuery primero, luego Popper.js, luego Bootstrap JS -->
+    <script src="librerias/popper.min.js"></script>
+    <script src="librerias/jquery-3.7.1.min.js"></script>
+    <script src="librerias/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script>
+   // Espera a que el documento HTML esté completamente cargado
+$(document).ready(function(){
+    // Agrega un controlador de eventos al hacer clic en el botón con el id "btnCalcular"
+    $('#btnCalcular').click(function(){
+        // Obtiene el valor del campo de entrada con el id "numero1" y lo almacena en la variable numero1
+        let numero1 = $('#numero1').val();
+        // Obtiene el valor del campo de entrada con el id "numero2" y lo almacena en la variable numero2
+        let numero2 = $('#numero2').val();
+        // Convierte el valor de numero1 a un número entero y lo almacena en la variable uno
+        let uno = parseInt(numero1);
+        // Convierte el valor de numero2 a un número entero y lo almacena en la variable dos
+        let dos = parseInt(numero2);
+        // Realiza la operación matemática de dividir uno por dos y almacena el resultado en la variable operacion
+        let operacion = (uno/dos);
+        // Establece el texto del elemento con el id "resultado" como el valor de la variable operacion
+        $('#resultado').text(operacion);
+    });
+});
+
+</script>
+
